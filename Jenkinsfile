@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage ("compile"){
       steps{ 
-       echo "this is a compile stage"
+       git clone https://github.com/Jagadheeswar-advantest/sampleproject.git
           }
     }
       stage ("build"){
         steps {
-          echo "this is a build stage" 
+          mvn clean package 
         }
       }
     stage ("test"){
